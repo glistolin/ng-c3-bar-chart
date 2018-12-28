@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <meta charset="utf-8" />
+  <title>AngularJS Plunker</title>
+  <script src="c3fix.js"></script>
+  <link data-require="c3.js@*" data-semver="0.4.11-rc4" rel="stylesheet" href="https://cdn.rawgit.com/masayuki0812/c3/0.4.11-rc4/c3.css" />
+  <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+  
+  <script data-require="c3.js@*" data-semver="0.4.11-rc4" src="https://cdn.rawgit.com/masayuki0812/c3/0.4.11-rc4/c3.js"></script>
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.9/angular.js" data-semver="1.4.9"></script>
+  <script data-require="d3@*" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
+  <script data-require="jquery@*" data-semver="2.2.0" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script data-require="bootstrap@*" data-semver="3.3.6" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-controller="C3Ctrl">
+  <div class="container">
+    <div id="chart" build-chart></div>
+  </div>
+  <div class="row">
+    <div class="form-group">
+  <button type="button" class="btn btn-grey col-sm-2 col-sm-offset-5" ng-click='clearSelections()'>Clear Selections</button>
+</div class="container">
+    <country-item country="country"></country-item>
+  </div>
+</body>
+
+</html>

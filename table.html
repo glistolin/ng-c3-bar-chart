@@ -1,0 +1,20 @@
+<div class="container">
+  <h3>Clicked: {{country}}</h3>
+  <table ng-cloak class='table table-striped full'>
+  <thead>
+    <tr class="foot">
+      <th><a href="#" ng-click="orderByField = 'country'; reverse=!reverse">Country</a>
+      </th>
+      <th><a href="#" ng-click="orderByField = 'fifarank'; reverse=!reverse">FIFA Rank</a>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="foot in countries | orderBy:orderByField:reverse | filter:country" country="country">
+      <td class='country'>{{foot.country}}</td>
+      <td>{{foot.fifarank}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
